@@ -1,0 +1,22 @@
+{
+  "name": "municipio",
+  "version": "1.0.0",
+  "main": "aula02.mongodb.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/isabelmaito/Banco_de_Dados-Nao_Relacional.git"
+  },
+  "author": "Isabel Maito",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/isabelmaito/Banco_de_Dados-Nao_Relacional/issues"
+  },
+  "homepage": "https://github.com/isabelmaito/Banco_de_Dados-Nao_Relacional#readme",
+  "description": "",
+  "dependencies": {
+    "mongodb": "^6.14.2"
+  }
+}
