@@ -1,0 +1,13 @@
+//api REST de Municipios
+@baseURL = http://localhost:3000/api/municipios
+@id = 67cf89840f7b6deccb9065d2
+
+###
+//GET - By Id
+GET {{baseURL}}/{{id}}
+Content-Type: application/json
+
+###
+//GET - Id inválido
+GET {{baseURL}}/3
+Content-Type: application/json
