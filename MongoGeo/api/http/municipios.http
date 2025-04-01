@@ -19,7 +19,7 @@ Content-Type: application/json
 
 {  "codigo_ibge": 3100104,
   "nome": "Abadia dos DDDourados",
-  "capital": false,
+  "capital": true,
   "codigo_uf": 31,
   "local": {
     "type": "Point",
