@@ -11,3 +11,18 @@ Content-Type: application/json
 //GET - Id inválido
 GET {{baseURL}}/3
 Content-Type: application/json
+
+###
+//POST - Insere um novo municipio
+POST {{baseURL}}
+Content-Type: application/json
+
+{  "codigo_ibge": 3100104,
+  "nome": "Abadia dos DDDourados",
+  "capital": false,
+  "codigo_uf": 31,
+  "local": {
+    "type": "Point",
+    "coordinates": [-47.3916, -18.4831]
+  }
+}
