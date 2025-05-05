@@ -78,6 +78,10 @@ export const validateUsuario = [
             minUppercase: 1,
             minSymbols: 1,
             minNumbers: 1
-        }).withMessage('A senha não é segura. Informe no mínimo 1 caracter maiúsculo, 1 minúsculo e 1 caractere especial')
+        }).withMessage('A senha não é segura. Informe no mínimo 1 caracter maiúsculo, 1 minúsculo e 1 caractere especial'),
+    check('ativo')
+        .default(true)
+        .isBoolean().withMessage('O valor deve ser um booleano'),
+
         
 ]
