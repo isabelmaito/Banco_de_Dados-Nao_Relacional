@@ -1,5 +1,7 @@
 import { check, param, validationResult } from 'express-validator'
 
+const db = req.app.locals.db
+
 //Middleware para verificar os resultados da validação
 export const validateRequest = (req, res, next) => {
     const errors = validationResult(req)
@@ -47,11 +49,15 @@ export const validateMunicipio = [
 ]
 
 //Validações do usuário
-export const validaUsuario = [
+export const validateUsuario = [
     check('nome')
         .not().isEmpty().trim().withMessage('É obrigatório informar o nome')
         .isAlpha('pt-BR', {ignore: ' '}).withMessage('Informe apenas texto')
         .isLength({min:3}).withMessage('Informe no mínimo 3 caracteres')
-        .isLength({max:100}).withMessage('Informe no máximo 100 caracteres')
+        .isLength({max:100}).withMessage('Informe no máximo 100 caracteres'),
+    check('email')
+        .not().isEmpty().trim().withMessage('É obrigatório informar o e-mail')
+        .isEmail().withMessage('Informe um e-mail válido')
+        .isLowercase().withMessage('Não são permitidas letras maiúsculas')
         
 ]
