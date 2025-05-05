@@ -82,6 +82,12 @@ export const validateUsuario = [
     check('ativo')
         .default(true)
         .isBoolean().withMessage('O valor deve ser um booleano'),
+    check('tipo')
+        .default('Cliente')
+        .isIn(['Cliente', 'Admin']).withMessage('O tipo deve ser Admin ou Cliente'),
+    check('avatar')
+        .optional({nullable: true})
+        .isURL().withMessage('A URL do Avatar é inválida')
 
         
 ]
