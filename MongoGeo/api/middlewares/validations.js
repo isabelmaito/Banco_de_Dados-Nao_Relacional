@@ -70,5 +70,14 @@ export const validateUsuario = [
             })
     }),
     check('senha')
+        .not().isEmpty().trim().withMessage('A senha é obrigatória')
+        .isLength({min:6}).withMessage('A senha deve ter no mínimo 6 caracteres')
+        .isStrongPassword({
+            minLength: 6,
+            minLowercase: 1, 
+            minUppercase: 1,
+            minSymbols: 1,
+            minNumbers: 1
+        }).withMessage('A senha não é segura. Informe no mínimo 1 caracter maiúsculo, 1 minúsculo e 1 caractere especial')
         
 ]
