@@ -87,7 +87,9 @@ export const validateUsuario = [
         .isIn(['Cliente', 'Admin']).withMessage('O tipo deve ser Admin ou Cliente'),
     check('avatar')
         .optional({nullable: true})
-        .isURL().withMessage('A URL do Avatar é inválida')
+        .isURL().withMessage('A URL do Avatar é inválida'),
+    //aplica as validações
+    validateRequest
 
         
 ]
