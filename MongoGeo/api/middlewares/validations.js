@@ -1,7 +1,5 @@
 import { check, param, validationResult } from 'express-validator'
 
-const db = req.app.locals.db
-
 //Middleware para verificar os resultados da validação
 export const validateRequest = (req, res, next) => {
     const errors = validationResult(req)
