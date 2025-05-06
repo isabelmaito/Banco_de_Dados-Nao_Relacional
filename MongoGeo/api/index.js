@@ -20,7 +20,7 @@ app.use('/favicon.ico', express.static('public/images/logo.png'))
 connectToDatabase(app)
     .then(() => {
         app.listen(PORT, () => {
-            console.log(`Servidor rodando na porta $[PORT]`);
+            console.log(`Servidor rodando na porta ${PORT}`);
         });
     })
     .catch((error) => {
