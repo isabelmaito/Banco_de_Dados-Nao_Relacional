@@ -1,11 +1,12 @@
 import express from 'express'
 import cors from 'cors' //importa o módulo cors
-import { connectToDatabase } from './config/db.js'
+import { connectToDatabase } from '../config/db.js'
 import municipioRoutes from './routes/municipios.js'
 import usuariosRoutes from './routes/usuarios.js'
 
 const app = express()
 const PORT = process.env.PORT || 3000
+console.log(PORT)
 
 app.use(cors()) //Habilita o CORS Cross-Origin resource sharing
 app.use(express.json()) //parse do JSON
