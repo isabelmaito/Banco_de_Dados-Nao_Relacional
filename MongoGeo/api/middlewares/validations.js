@@ -59,12 +59,12 @@ export const validateUsuario = [
         .not().isEmpty().trim().withMessage('É obrigatório informar o e-mail')
         .isEmail().withMessage('Informe um e-mail válido')
         .isLowercase().withMessage('Não são permitidas letras maiúsculas')
-        .custom((value, { req })=> {
+        .custom((value, {  })=> {
             return db.collection('usuario')
                  .find({email: {$eq: value}}).toArray()
                  .then((email) => {
                 //Verifica se não existe o ID para garantir que é inclusão
-                if(email.lenght && !req.params.id){
+                if(email.lenght ){
                     return Promise.reject(`O email ${value} já existe!`)
                 }
             })
