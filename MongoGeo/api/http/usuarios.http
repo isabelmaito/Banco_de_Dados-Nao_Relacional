@@ -1,22 +1,22 @@
-//api REST de Usuários
-@baseURL = http://localhost:3000/api/usuarios
+@baseUrl = http://localhost:3000/api/usuarios
 ###
-# @prompt senha 
-POST {{baseURL}}
+# @prompt senha
+POST {{baseUrl}}
 Content-Type: application/json
 
 {
-    "nome": "Albert Einstein",
-    "email": "einstein@fatec.gov.br",
-    "senha": "{{senha}}"
+  "nome": "Albert Einstein",
+  "email": "einstein@fatec.gov.br",
+  "senha": "{{senha}}"
 }
 
 ###
 # @prompt senha
-POST {{{baseURL}}/login
+POST {{baseUrl}}/login
 Content-Type: application/json
 
 {
-    "email": 'zeeinsttein@fatec.gov.br",
-    "senha": "{{senha}}"
+  "email": "einstein@fatec.gov.br",
+  "senha": "{{senha}}"
 }
+ 
