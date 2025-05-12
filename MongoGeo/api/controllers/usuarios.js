@@ -54,7 +54,8 @@ export const efetuaLogin = async (req,res) => {
             process.env.SECRET_KEY,
             {expiresIn: process.env.EXPIRES_IN},
             (err, token) => {
-                if(err) throw errres.status(200).json({
+                if(err) throw err
+                res.status(200).json({
                     acess_token: token,
                     msg: 'Login efetuado com sucesso'
                 })
