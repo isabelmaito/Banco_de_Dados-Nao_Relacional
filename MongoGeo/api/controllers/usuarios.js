@@ -16,9 +16,8 @@ export const insereUsuario = async(req, res) =>{
     const db = req.app.locals.db
     await db.collection('usuarios')
         .insertOne(req.body)
-        .then(result => res.status(201).send(result)
-            .catch(err => Response.status(400).json(err))
-        )
+        .then(result => res.status(201).send(result))
+        .catch(err => Response.status(400).json(err))
 }
 
 export const efetuaLogin = async (req,res) => {
@@ -28,7 +27,7 @@ export const efetuaLogin = async (req,res) => {
         //verificar se o email existe no MongoDB
         let usuario = await db.collection('usuarios').find({email}).limit(1).toArray()
         //se o array estiver vazio, é porque não tem
-        if(!usuario.lengt){
+        if(!usuario.length){
             return res.status(404).json({
                 errors: [{
                     value: `${email}`,
