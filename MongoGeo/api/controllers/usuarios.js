@@ -20,3 +20,16 @@ export const insereUsuario = async(req, res) =>{
             .catch(err => Response.status(400).json(err))
         )
 }
+
+export const efetuaLogin = async (req,res) => {
+    const { email, senha} = req.body
+    try{
+        const db = req.app.locals.db
+        //verificar se o email existe no MongoDB
+        let usuario = await db.collection('usuarios').find({email}).limit(1).toArray()
+        //se o array estiver vazio, é porque não tem
+        if(!usuario.lengt){
+            
+        }
+    }
+}
