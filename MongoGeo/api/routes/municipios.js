@@ -6,7 +6,7 @@ import auth from '../middlewares/auth.js'
 const router = express.Router()
 
 //GET Municipio by id
-router.get('/:id', getMunicipiosById)
+router.get('/:id', auth, getMunicipiosById)
 
 //POST criar um novo municipio
 router.post('/',validateMunicipio, createMunicipio)
