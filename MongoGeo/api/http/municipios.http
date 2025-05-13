@@ -7,6 +7,7 @@
 //GET - By Id
 GET {{baseURL}}/{{id}}
 Content-Type: application/json
+access-token: {{token}}
 
 ###
 //GET - Id inválido
