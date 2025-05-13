@@ -1,7 +1,7 @@
 import express from 'express'
 import { getMunicipiosById , createMunicipio} from '../controllers/municipios.js'
-import { validateMunicipio } from '../middlewares/validations.js'
-
+import { validateMunicipio, validadeteMunicipio, validadetObjectId } from '../middlewares/validations.js'
+import auth from '../middlewares/auth.js'
 
 const router = express.Router()
 
