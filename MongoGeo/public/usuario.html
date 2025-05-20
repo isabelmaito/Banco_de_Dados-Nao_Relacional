@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novo Usuário</title>
+    <!-- CSS do Bootstrap -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+</head>
+<body class="bg-light">
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card shadow">
+                    <div class="card-header">
+                        <h1 class="text-success">Novo Usuário</h1>
+                    </div>
+                    <!--SVG-->
+                    <center>
+                    <object data="images/login.svg" type="image/svg+xml" class="mt-3" style="width:30%"></object>
+                    </center>
+                    <div class="card-body">
+                        <form id="formLogin">
+                          <div class="mb-2">
+<label for="nome" class="form-label">Nome Completo</label>
+<input type="text" class="form-control" id="nome" name="nome" placeholder="Nome Completo" required autofocus/>
+                          </div>
+                            <div class="mb-2">
+ <label for="login" class="form-label">E-mail</label>
+ <input type="email" class="form-control" id="login" name="login" autofocus  autocomplete="email" />
+                            </div>
+                            <div class="mb-2">
+<label for="senha" class="form-label">Senha</label> 
+<input type="password" class="form-control" id="senha" name="senha" required>                              
+                            </div>
+                            <div class="my-4">
+  <button type="submit" class="btn btn-success">✍️Cadastre-se</button>                              
+                            </div>
+                        </form>
+                    </div> <!--fecha o card-body -->
+                    <div class="card-footer text-muted">
+Já é um usuário? <a href="index.html">Efetue o login!</a>                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+     <div class="modal" tabindex="-1" id="modalMensagem">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Mensagem</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p id="mensagem"></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
+    <!-- JS do Bootstrap -->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+<!-- JS do Projeto -->
+ <script src="js/usuario.js"></script>
+    </body>
+</html>
